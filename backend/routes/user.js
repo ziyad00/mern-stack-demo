@@ -13,7 +13,7 @@ import checkAuth from '../middleware/check-auth.js'
 router.post("/auth/signup", UserController.user_signup);
 
 router.post("/auth/login", UserController.user_login);
-router.post("/", UserController.user_get_all);
+router.get("/", UserController.user_get_all);
 
 
 

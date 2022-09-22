@@ -12,9 +12,9 @@ const user_get_all = (req, res, next) => {
         const response = {
           count: docs.length,
           users: docs.map(doc => {
-
+            const newDoc = {user_name: doc.user_name,counted_articles:doc.counted_articles}
             return {
-              user: doc,
+              user: newDoc,
               request: {
                 type: "GET",
               }
