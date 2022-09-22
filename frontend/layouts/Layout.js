@@ -6,15 +6,7 @@ import {useRouter} from "next/router";
 const Layout = (props) => {
     const router = useRouter();
 
-    const logout = async () => {
-        await fetch('http://localhost:8000/api/logout', {
-            method: 'POST',
-            headers: {'Content-Type': 'application/json'},
-            credentials: 'include',
-        })
 
-        await router.push('/login');
-    }
 
     let menu;
 
@@ -33,15 +25,7 @@ const Layout = (props) => {
                 </li>
             </ul>
         )
-    } else {
-        menu = (
-            <ul className="navbar-nav me-auto mb-2 mb-md-0">
-                <li className="nav-item">
-                    <a href="#" className="nav-link active" onClick={logout}>Logout</a>
-                </li>
-            </ul>
-        )
-    }
+    } 
 
     return (
         <>
