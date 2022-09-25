@@ -3,7 +3,7 @@ import Layout from "../layouts/Layout";
 import {useRouter} from "next/router";
 
 const Register = () => {
-    const [name, setName] = useState('');
+    const [user_name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const router = useRouter();
@@ -15,7 +15,7 @@ const Register = () => {
             method: "POST",
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify({
-                name,
+                user_name,
                 email,
                 password
             })
